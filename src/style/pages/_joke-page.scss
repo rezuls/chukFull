@@ -1,0 +1,36 @@
+.body.overlay-tablet {
+	&::before {
+		content: '';
+		background: rgba(0, 0, 0, 0.3);
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+	.joke-content {
+		position: fixed;
+	}
+	.joke-like {
+		z-index: 2;
+		flex: 0 0 480px;
+		margin-right: 0;
+		display: block;
+		@include xs {
+			flex: 0 0 100%;
+		}
+	}
+	.hamburger__icon {
+		&::before {
+			transform: rotate(45deg);
+			top: 13px;
+		}
+		&::after {
+			transform: rotate(-45deg);
+			top: 13px;
+		}
+	}
+}
